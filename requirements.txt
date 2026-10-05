@@ -1,0 +1,8 @@
+# Pinned for reproducibility. Python 3.10+ required (uses X | Y type syntax).
+#
+# FFmpeg is NOT a pip package and is NOT listed here -- it must be installed on
+# the host and available on PATH. See README.md -> "FFmpeg".
+
+requests==2.34.2
+python-dotenv==1.2.4
+edge-tts==7.2.8
