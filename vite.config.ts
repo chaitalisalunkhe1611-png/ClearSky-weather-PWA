@@ -1,3 +1,4 @@
+/// <reference types="vitest" />
 import { defineConfig } from 'vite';
 import react from '@vitejs/plugin-react';
 import { VitePWA } from 'vite-plugin-pwa';
@@ -7,10 +8,8 @@ export default defineConfig({
   plugins: [
     react(),
     VitePWA({
-      // Add these two lines
       strategies: 'generateSW',
       injectRegister: 'auto',
-      // -------------------
       registerType: 'autoUpdate',
       includeAssets: ['favicon.svg', 'clearsky-icon.svg', 'screenshot-wide.png', 'screenshot-narrow.png'],
       manifest: {
@@ -55,5 +54,10 @@ export default defineConfig({
         ]
       }
     })
-  ]
+  ],
+  test: {
+    environment: 'jsdom',
+    setupFiles: './src/test/setup.ts',
+    globals: true,
+  }
 });
