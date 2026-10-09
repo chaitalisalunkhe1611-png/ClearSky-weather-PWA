@@ -5,7 +5,7 @@ import { VitePWA } from 'vite-plugin-pwa'
 
 export default defineConfig({
   // GitHub Pages project sites are served beneath /<repository>/.
-  base: process.env.GITHUB_ACTIONS ? '/ai_cartoonmaker/' : '/',
+  base: '/ClearSky-weather-PWA/',
   server: { host: '0.0.0.0', allowedHosts: true },
   preview: { host: '0.0.0.0', allowedHosts: true },
   build: {
